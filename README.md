@@ -11,8 +11,8 @@ sudo apt-get update && sudo apt-get install logstash <br>
 
 cd /etc/logstash/conf.d
 
-nano logstash.conf (for a given log file)
-nano logstash-system.conf (for microservices direct connect to logstash @
+nano logstash.conf (for a given log file) or
+nano logstash-system.conf (for spring boot microservices direct connect to logstash @tcp://127.0.0.1:25826)
 
 sudo service elasticsearch start <br>
 sudo service kibana start <br>
