@@ -27,3 +27,14 @@ stack management
 
 Discover <br>
 change index pattern to logstash-* <br>
+
+For Docker Compose:
+
+> sudo apt install docker-compose <br>
+> docker–compose –version <br>
+> docker-compose -f docker-compose.yml up <br>
+> sudo sysctl -w vm.max_map_count=262144 <br> 
+> nano  /etc/rsyslog.conf <br>
+Uncomment the UDP and TCP connection sections<br>
+
+docker run –log-driver syslog –log-opt syslog-address=tcp://{logstashhost}:{logstashport}<br>
