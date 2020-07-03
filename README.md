@@ -23,7 +23,6 @@ input {
 }
 
 filter {
-  #If log line contains tab character followed by 'at' then we will tag that entry as stacktrace
   if [message] =~ "\tat" {
     grok {
       match => ["message", "^(\tat)"]
@@ -47,8 +46,6 @@ output {
   stdout {
     codec => rubydebug
   }
-
-  # Sending properly parsed log events to elasticsearch
   elasticsearch {
     hosts => ["localhost:9200"]
   }
